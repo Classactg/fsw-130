@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UglyForm from "./UglyForm"
+import UglyForm from "./UglyForm";
 import UglyList from "./Uglylist"
 class App extends React.Component {
   constructor(){
