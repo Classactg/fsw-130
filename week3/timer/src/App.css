@@ -36,14 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-.dark-theme {
-  background-color: #333333;
-  color: whitesmoke;
-}
-
-.light-theme {
-  background-color: whitesmoke;
-  color: #333333;
-}
