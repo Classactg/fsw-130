@@ -7,6 +7,9 @@ function Header(props) {
             {context => (
                 <header className={`${context.theme}-theme`}>
                     <h2>{context.theme === "light" ? "Light" : "Dark"} Theme</h2>
+                    <h1>
+                        {context.movie}
+                    </h1>
                 </header>
             )}
         </ThemeContextConsumer>

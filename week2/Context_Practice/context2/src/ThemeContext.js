@@ -4,7 +4,7 @@ const {Provider, Consumer} = React.createContext()
 class ThemeContextProvider extends Component {
     state = {
         theme: "light",
-        
+            movie: "Toy Story"    
     }
 
     toggleTheme = () => {
@@ -15,9 +15,16 @@ class ThemeContextProvider extends Component {
             }
         })
     }
+    toggleMovie = () => {
+        this.setState(prevState => {
+            return {
+                movie: "Toy Story 2"  
+            }
+        })
+    }
       render() {
           return (
-          <Provider value={{theme: this.state.theme, toggleTheme: this.toggleTheme}}>
+          <Provider value={{theme: this.state.theme, toggleTheme: this.toggleTheme, movie: this.state.movie, toggleMovie: this.toggleMovie}}>
               {this.props.children}
               </Provider>
           )    
