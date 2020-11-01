@@ -17,7 +17,7 @@ function favoriteThingsReducer(favoriteThings = [], action) {
         case "ADD_FAVORITE_THING":
             return [...favoriteThings, action.payload]
         case "REMOVE_FAVORITE_THING": { 
-            const updatedArr = state.favoriteThings(thing => thing.toLowerCase  ==!
+            const updatedArr = favoriteThings.filter(thing => thing.toLowerCase  ==!
                 action.payload.toLowerCase())
                 return updatedArr
             
@@ -28,4 +28,4 @@ function favoriteThingsReducer(favoriteThings = [], action) {
     }
 }
 
-module.exports = favoriteThingsReducer
+module.exports = {favoriteThingsReducer, addFavoriteThing, removeFavoriteThing}

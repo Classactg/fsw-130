@@ -67,4 +67,4 @@ function youTubeVideoReducer(youTubeVideo = initialState, action) {
     }
 }
 
-module.exports = youTubeVideoReducer
+module.exports = {youTubeVideoReducer, incrementViewCount, upvoteVideo, downVoteVideo, setYouTubeTitle}
