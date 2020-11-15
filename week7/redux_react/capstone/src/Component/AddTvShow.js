@@ -1,10 +1,10 @@
 import {connect} from "react-redux";
 import React from "react";
 
-import {addMovie, deleteMovie} from './../Redux/movies/actions'
+import {addtvShows, deleteMovie} from '../Redux/movies/tvShows/actions'
 
 
-class Movie extends React.Component {
+class TvShows extends React.Component {
   constructor (){
     super()
     this.state = {zombieMovies:"", moviesDigits:"", email:""}
@@ -20,13 +20,13 @@ class Movie extends React.Component {
 render (){ 
   console.log(this.props, "line21")
   return (
-    <div className="Movie">
-      <form><input placeholder = "Movie" name = "zombieMovies" value = {this.state.zombieMovies} onChange = {this.handleChange}>
+    <div className="TvShows">
+      <form><input placeholder = "TV Shows" name = "zombieMovies" value = {this.state.zombieMovies} onChange = {this.handleChange}>
       
       </input>
       <button onClick={e =>{ 
         e.preventDefault()
-        this.props.dispatch(addMovie({zombieMovies: this.state.zombieMovies, moviesDigits: this.state.moviesDigits, email: this.state.email}))}}>Submit</button>
+        this.props.dispatch(addtvShows({zombieMovies: this.state.zombieMovies, moviesDigits: this.state.moviesDigits, email: this.state.email}))}}>Submit</button>
       <input placeholder = "Year" name = "moviesDigits" value = {this.state.moviesDigits} onChange = {this.handleChange}>
 
       </input>
@@ -46,5 +46,4 @@ const mapStateToProps = (state) => {
   console.log(state, "line40")
   return {movies: state.movies.movies}
 }
-export default connect(mapStateToProps)(Movie);
-
+export default connect(mapStateToProps)(TvShows);
